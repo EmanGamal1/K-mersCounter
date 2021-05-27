@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-mers Counter</title>
+    <link rel="stylesheet" href="st.css.css">
+
+    <script>
+      function seqFUN(){
+        var Q=document.getElementById("w").value;
+        var E=document.getElementById("k").value;
+    
+        var result=parseFloat(Q.length)-parseFloat(E)+1;
+        
+        if(!isNaN(result) && result>0)
+        {
+          alert("The number of kmers = "+result);
+        }
+        else{
+          alert("There is an error, Please check your inputs");
+        }
+      }
+      
+ 
+      
+    </script> 
+</head>
+
+<body>
+  
+    <main>
+         <header></header>
+
+         <nav> 
+            <h3 class="logo">  <img src="Images/logo_task.png" width="30%" height="30%"></h3>
+              <ul>
+                <li class="opened"><a href="#">Home</a></li>
+                <li class="not-op"><a href="#">About us</a></li>
+                <li class="not-op"><a href="#">Our community</a></li>
+              </ul>
+         </nav>
+
+         
+        <!-- Box1 -->
+        <div class="box1">
+          
+          <form name="sequence" id="myForm">
+            <p>Enter a sequance</p>
+            <input type="text" class="cButton" id="w" name="seq" required><br>
+
+            <p id="P_kmers">Enter the K-mer's size</p>
+            <input type="text" class="cButton" id="k"name="kmers" required><br>
+
+            <button class="cButton" id="BUTTON" onclick="seqFUN()"> Submit</a> 
+            </button>
+            <button class="cButton" id="BUTTON">
+              Reset
+            </button>
+          </form>
+          
+    </main>
+</body>
+</html>
